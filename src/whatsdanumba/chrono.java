@@ -11,9 +11,15 @@ package whatsdanumba;
 public class chrono {
 
     long temps;
-    
+
     public chrono() {
         temps = 0;
     }
 
+    public String getTime() {
+        int sec = (int) ((System.currentTimeMillis() / 1000) % 60);
+        int min = (int) ((System.currentTimeMillis() / 1000) / 60);
+  
+       return min+":"+sec;
+    }
 }
